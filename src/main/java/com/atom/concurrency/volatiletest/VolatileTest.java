@@ -5,7 +5,7 @@ package com.atom.concurrency.volatiletest;
  */
 public class VolatileTest {
 
-    private /*volatile*/ static int INIT_VALUE = 0;// 线程间的共享数据
+    private volatile static int INIT_VALUE = 0;// 线程间的共享数据
     private final static int MAX_LIMIT = 5;
 
     public static void main(String[] args) {
