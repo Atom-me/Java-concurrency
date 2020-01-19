@@ -16,7 +16,9 @@ import java.util.concurrent.PriorityBlockingQueue;
  */
 public class PriorityBlockingQueueTest {
 
-    public static void main(String[] args) throws InterruptedException {
+
+    @Test
+    public void testSeq() throws InterruptedException {
         BlockingQueue<Task> blockingQueue = new PriorityBlockingQueue<>(16);
         blockingQueue.put(new Task(9, "task9"));
         blockingQueue.put(new Task(1, "task1"));
