@@ -1,4 +1,4 @@
-package com.atom.concurrency.concurrentCollections;
+package com.atom.concurrency.blockingqueue;
 
 import org.junit.After;
 import org.junit.Before;
