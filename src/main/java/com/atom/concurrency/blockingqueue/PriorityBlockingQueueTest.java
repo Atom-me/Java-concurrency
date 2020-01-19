@@ -38,4 +38,22 @@ public class PriorityBlockingQueueTest {
     }
 
 
+    /**
+     * drainTo 方法会以优先级顺序将队列里的元素转移到另一个集合里
+     *
+     * @throws InterruptedException
+     */
+    @Test
+    public void testDrainTo() throws InterruptedException {
+        BlockingQueue<Task> blockingQueue = new PriorityBlockingQueue<>(16);
+        blockingQueue.put(new Task(9, "task9"));
+        blockingQueue.put(new Task(1, "task1"));
+        blockingQueue.put(new Task(3, "task3"));
+        blockingQueue.put(new Task(3, "task3——1"));
+        blockingQueue.put(new Task(6, "task6"));
+
+        List<Task> taskList = new ArrayList<>();
+        blockingQueue.drainTo(taskList, 3);
+        System.out.println(taskList);
+    }
 }
